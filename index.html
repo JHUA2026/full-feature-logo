@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Canva Instruction PDF Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>📄 Canva Instruction PDF Generator</h1>
+    <p class="subtitle">Etsy-ready • Multi-page • Clickable links</p>
+
+    <label>Product Name</label>
+    <input id="productName" type="text" placeholder="Wedding Sticker Template">
+
+    <label>Canva Template Link</label>
+    <input id="canvaLink" type="text" placeholder="https://www.canva.com/...">
+
+    <label>Upload Logo (PNG/JPG)</label>
+    <input id="logoFile" type="file" accept="image/*">
+    <img id="logoPreview" />
+
+    <label>Brand Colour</label>
+    <input id="brandColor" type="color" value="#4f46e5">
+
+    <label>Paper Size</label>
+    <select id="paperSize">
+      <option value="a4">A4</option>
+      <option value="letter">US Letter</option>
+    </select>
+
+    <h2>Instruction Sections</h2>
+
+    <label><input type="checkbox" id="toggle1" checked> Step 1 – Getting Started</label>
+    <textarea id="step1"></textarea>
+
+    <label><input type="checkbox" id="toggle2" checked> Step 2 – Editing the Template</label>
+    <textarea id="step2"></textarea>
+
+    <label><input type="checkbox" id="toggle3" checked> Step 3 – Downloading & Using</label>
+    <textarea id="step3"></textarea>
+
+    <label><input type="checkbox" id="toggleThanks" checked> Thank You / Support Page</label>
+
+    <button id="generateBtn">Generate PDF</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
